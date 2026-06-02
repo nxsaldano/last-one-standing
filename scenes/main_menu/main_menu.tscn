@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://c14p8rx0gqscn"]
+
+[ext_resource type="Texture2D" uid="uid://c11nqdoju753p" path="res://assets/images/backgrounds/menuBackground.jpg" id="1_ob46e"]
+[ext_resource type="Shader" uid="uid://bfhcmvf1ycw44" path="res://scenes/main_menu/main_menu.gdshader" id="2_uqeha"]
+[ext_resource type="FontFile" uid="uid://bskjfrd686h4j" path="res://fonts/Gamelo-BF68adce8dc4fcf.otf" id="3_wem23"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3ovsr"]
+shader = ExtResource("2_uqeha")
+shader_parameter/intensity = 0.538000025555
+shader_parameter/smoothness = 0.4570000217075
+
+[node name="MainMenu" type="Node2D" unique_id=1320891583]
+
+[node name="BackgroundLayer" type="CanvasLayer" parent="." unique_id=1795676833]
+
+[node name="BGRect" type="TextureRect" parent="BackgroundLayer" unique_id=2141066570]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 848.0
+offset_bottom = 477.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_ob46e")
+
+[node name="VignetteRect" type="ColorRect" parent="BackgroundLayer" unique_id=1827060619]
+material = SubResource("ShaderMaterial_3ovsr")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ContentLayer" type="CanvasLayer" parent="." unique_id=1267039260]
+
+[node name="TitleLabel" type="Label" parent="ContentLayer" unique_id=1339448104]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.26666668)
+theme_override_constants/shadow_offset_y = 16
+theme_override_fonts/font = ExtResource("3_wem23")
+theme_override_font_sizes/font_size = 200
+text = "Last One Standing"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MenuSection" type="VBoxContainer" parent="ContentLayer" unique_id=1654154555]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.0
+offset_top = 120.5
+offset_right = 41.0
+offset_bottom = 253.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="PlayButton" type="Button" parent="ContentLayer/MenuSection" unique_id=1309337719]
+layout_mode = 2
+text = "PLAY"
+
+[node name="SettingsButton" type="Button" parent="ContentLayer/MenuSection" unique_id=1237294894]
+layout_mode = 2
+text = "SETTINGS"
+
+[node name="QuitButton" type="Button" parent="ContentLayer/MenuSection" unique_id=634536054]
+layout_mode = 2
+text = "QUIT
+"

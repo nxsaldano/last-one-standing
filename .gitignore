@@ -1,0 +1,14 @@
+# Godot cache and import files
+.godot/
+/android/
+
+# Mono/C# specific
+.mono/
+data_*/
+
+# Export presets (contains sensitive paths)
+export_presets.cfg
+
+# OS files
+.DS_Store
+Thumbs.db
