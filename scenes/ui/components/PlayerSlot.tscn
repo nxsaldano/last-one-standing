@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://drktaa8unu53p"]
+
+[ext_resource type="Script" uid="uid://d22b42jnnggxe" path="res://scenes/ui/components/PlayerSlot.gd" id="1_ecot8"]
+
+[node name="PlayerSlot" type="VBoxContainer" unique_id=1511326049]
+script = ExtResource("1_ecot8")
+
+[node name="Avatar" type="ColorRect" parent="." unique_id=415583252]
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="." unique_id=584214516]
+layout_mode = 2

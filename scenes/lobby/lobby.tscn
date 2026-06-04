@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://lthtk3nwrnb4"]
+
+[ext_resource type="Texture2D" uid="uid://b7t2c370hrlpv" path="res://assets/images/entities/Qrcode_wikipedia.jpg" id="1_1ig7j"]
+[ext_resource type="Script" uid="uid://dt1wbmfbe6iu4" path="res://scenes/lobby/lobby.gd" id="1_ukx7c"]
+
+[node name="Lobby" type="Node2D" unique_id=1734721978]
+script = ExtResource("1_ukx7c")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=622574742]
+
+[node name="BackgroundLayer" type="CanvasLayer" parent="." unique_id=455332102]
+
+[node name="BGRect" type="ColorRect" parent="BackgroundLayer" unique_id=1604883531]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.45910835, 0.5197617, 0.72210205, 1)
+
+[node name="ContentLayer" type="CanvasLayer" parent="." unique_id=1374410074]
+
+[node name="TitleLabel" type="Label" parent="ContentLayer" unique_id=1145227713]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -59.0
+offset_right = 59.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "LOBBY"
+horizontal_alignment = 1
+
+[node name="MainContent" type="VBoxContainer" parent="ContentLayer" unique_id=687112286]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="QRSection" type="VBoxContainer" parent="ContentLayer/MainContent" unique_id=480533796]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="QRCode" type="TextureRect" parent="ContentLayer/MainContent/QRSection" unique_id=2105211089]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_1ig7j")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ScanLabel" type="Label" parent="ContentLayer/MainContent/QRSection" unique_id=1582435449]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "SCAN TO JOIN"
+horizontal_alignment = 1
+
+[node name="PlayersSection" type="VBoxContainer" parent="ContentLayer/MainContent" unique_id=1472032311]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PlayerGrid" type="HBoxContainer" parent="ContentLayer/MainContent/PlayersSection" unique_id=648573200]
+layout_mode = 2
+
+[node name="BottomBar" type="HBoxContainer" parent="ContentLayer" unique_id=1297671445]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BackButton" type="Button" parent="ContentLayer/BottomBar" unique_id=1696570196]
+layout_mode = 2
+
+[node name="StartButton" type="Button" parent="ContentLayer/BottomBar" unique_id=1931532631]
+layout_mode = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=773477693]
