@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://dvu0piybkqi8e"]
+
+[ext_resource type="Script" uid="uid://81jl0en66oxw" path="res://scenes/deck_selection/deck_selection.gd" id="1_5l68m"]
+
+[node name="DeckSelection" type="Node2D" unique_id=1380184963]
+script = ExtResource("1_5l68m")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=453221110]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ContentLayer" type="Control" parent="." unique_id=192554935]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TitleLabel" type="Label" parent="ContentLayer" unique_id=1388483153]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Selecciona un mazo:"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ContentLayer" unique_id=1468378895]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SquidGamePanel" type="PanelContainer" parent="ContentLayer/HBoxContainer" unique_id=1472668606]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ContentLayer/HBoxContainer/SquidGamePanel" unique_id=1678794707]
+layout_mode = 2
+
+[node name="DeckImage" type="TextureRect" parent="ContentLayer/HBoxContainer/SquidGamePanel/VBoxContainer" unique_id=929862180]
+layout_mode = 2
+
+[node name="DeckNameLabel" type="Label" parent="ContentLayer/HBoxContainer/SquidGamePanel/VBoxContainer" unique_id=254011947]
+layout_mode = 2
+
+[node name="VoteCount" type="Label" parent="ContentLayer/HBoxContainer/SquidGamePanel/VBoxContainer" unique_id=480315392]
+layout_mode = 2
+
+[node name="StrangerThingsPanel" type="PanelContainer" parent="ContentLayer/HBoxContainer" unique_id=114088541]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ContentLayer/HBoxContainer/StrangerThingsPanel" unique_id=34892550]
+layout_mode = 2
+
+[node name="DeckImage" type="TextureRect" parent="ContentLayer/HBoxContainer/StrangerThingsPanel/VBoxContainer" unique_id=1547531153]
+layout_mode = 2
+
+[node name="DeckNameLabel" type="Label" parent="ContentLayer/HBoxContainer/StrangerThingsPanel/VBoxContainer" unique_id=1285900242]
+layout_mode = 2
+
+[node name="VoteCount" type="Label" parent="ContentLayer/HBoxContainer/StrangerThingsPanel/VBoxContainer" unique_id=1240860898]
+layout_mode = 2
+
+[node name="SexEducationPanel" type="PanelContainer" parent="ContentLayer/HBoxContainer" unique_id=615468300]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ContentLayer/HBoxContainer/SexEducationPanel" unique_id=458189931]
+layout_mode = 2
+
+[node name="DeckImage" type="TextureRect" parent="ContentLayer/HBoxContainer/SexEducationPanel/VBoxContainer" unique_id=812264102]
+layout_mode = 2
+
+[node name="DeckNameLabel" type="Label" parent="ContentLayer/HBoxContainer/SexEducationPanel/VBoxContainer" unique_id=2005032400]
+layout_mode = 2
+
+[node name="VoteCount" type="Label" parent="ContentLayer/HBoxContainer/SexEducationPanel/VBoxContainer" unique_id=54741383]
+layout_mode = 2

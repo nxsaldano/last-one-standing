@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c14p8rx0gqscn"]
 
 [ext_resource type="Texture2D" uid="uid://c11nqdoju753p" path="res://assets/images/backgrounds/menuBackground.jpg" id="1_ob46e"]
+[ext_resource type="Script" uid="uid://b6mixh77mfqpb" path="res://scenes/main_menu/main_menu.gd" id="1_uqeha"]
 [ext_resource type="Shader" uid="uid://bfhcmvf1ycw44" path="res://scenes/main_menu/main_menu.gdshader" id="2_uqeha"]
 [ext_resource type="FontFile" uid="uid://bskjfrd686h4j" path="res://fonts/Gamelo-BF68adce8dc4fcf.otf" id="3_wem23"]
 
@@ -10,6 +11,7 @@ shader_parameter/intensity = 0.538000025555
 shader_parameter/smoothness = 0.4570000217075
 
 [node name="MainMenu" type="Node2D" unique_id=1320891583]
+script = ExtResource("1_uqeha")
 
 [node name="BackgroundLayer" type="CanvasLayer" parent="." unique_id=1795676833]
 

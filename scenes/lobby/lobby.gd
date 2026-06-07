@@ -45,8 +45,8 @@ func _connect_signals() -> void:
 func _build_empty_slots() -> void:
 	for i in MAX_PLAYERS:
 		var slot := PLAYER_SLOT_SCENE.instantiate()
-		slot.set_empty()
-		player_grid.add_child(slot)
+		player_grid.add_child(slot)  # add to tree FIRST
+		slot.set_empty()             # THEN call methods on it
 		_slots.append(slot)
 
 

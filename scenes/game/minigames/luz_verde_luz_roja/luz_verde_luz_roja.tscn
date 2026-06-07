@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://coso12s5l7vvw"]
+
+[ext_resource type="Script" uid="uid://njv50n34k332" path="res://scenes/game/minigames/luz_verde_luz_roja/luz_verde_luz_roja.gd" id="1_v1aul"]
+[ext_resource type="Texture2D" uid="uid://kbs1c3tqf5p3" path="res://assets/images/backgrounds/green-young-hee.jpg" id="2_gakdk"]
+[ext_resource type="Texture2D" uid="uid://dg4ai1jd4gqxv" path="res://assets/images/entities/pendulum-arm.png" id="3_pd50o"]
+
+[node name="Luz Verde Luz Roja" type="Node2D" unique_id=605307152]
+script = ExtResource("1_v1aul")
+
+[node name="BackgroundRect" type="ColorRect" parent="." unique_id=1135423769]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="YoungHeeImage" type="Sprite2D" parent="." unique_id=882000457]
+position = Vector2(640, 360)
+texture = ExtResource("2_gakdk")
+
+[node name="Pendulum" type="Node2D" parent="." unique_id=1089293531]
+
+[node name="PendulumArm" type="Sprite2D" parent="Pendulum" unique_id=1113332208]
+position = Vector2(640, 360)
+texture = ExtResource("3_pd50o")
+
+[node name="UILayer" type="CanvasLayer" parent="." unique_id=937624303]
+
+[node name="StatusLabel" type="Label" parent="UILayer" unique_id=1799576262]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="TimerLabel" type="Label" parent="UILayer" unique_id=272602142]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="PlayersGrid" type="HBoxContainer" parent="UILayer" unique_id=526911707]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GameTimer" type="Timer" parent="." unique_id=1833416727]
+wait_time = 10.0
+one_shot = true
