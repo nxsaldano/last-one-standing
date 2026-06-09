@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://kbs1c3tqf5p3" path="res://assets/images/backgrounds/green-young-hee.jpg" id="2_gakdk"]
 [ext_resource type="Texture2D" uid="uid://dg4ai1jd4gqxv" path="res://assets/images/entities/pendulum-arm.png" id="3_pd50o"]
 
-[node name="Luz Verde Luz Roja" type="Node2D" unique_id=605307152]
+[node name="LuzVerdeLuzRoja" type="Node2D" unique_id=605307152]
 script = ExtResource("1_v1aul")
 
 [node name="BackgroundRect" type="ColorRect" parent="." unique_id=1135423769]

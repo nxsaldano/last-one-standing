@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://lthtk3nwrnb4"]
 
 [ext_resource type="Texture2D" uid="uid://b7t2c370hrlpv" path="res://assets/images/entities/Qrcode_wikipedia.jpg" id="1_1ig7j"]
-[ext_resource type="Script" uid="uid://dt1wbmfbe6iu4" path="res://scenes/lobby/lobby.gd" id="1_ukx7c"]
+[ext_resource type="Script" uid="uid://dt1wbmfbe6iu4" path="res://scenes/game/lobby/lobby.gd" id="1_ukx7c"]
 
 [node name="Lobby" type="Node2D" unique_id=1734721978]
 script = ExtResource("1_ukx7c")
@@ -63,17 +63,14 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 
+[node name="PlayersLabel" type="Label" parent="ContentLayer/MainContent/PlayersSection" unique_id=1141637452]
+layout_mode = 2
+text = "PLAYERS"
+
 [node name="PlayerGrid" type="HBoxContainer" parent="ContentLayer/MainContent/PlayersSection" unique_id=648573200]
 layout_mode = 2
 
-[node name="BottomBar" type="HBoxContainer" parent="ContentLayer" unique_id=1297671445]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="BackButton" type="Button" parent="ContentLayer/BottomBar" unique_id=1696570196]
-layout_mode = 2
-
-[node name="StartButton" type="Button" parent="ContentLayer/BottomBar" unique_id=1931532631]
+[node name="CountdownLabel" type="Label" parent="ContentLayer/MainContent/PlayersSection" unique_id=79402091]
 layout_mode = 2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=773477693]

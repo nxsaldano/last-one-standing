@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://b4xbidso6e7er"]
+
+[ext_resource type="Script" uid="uid://btox80io5pxf" path="res://scenes/game/point_table/point_table.gd" id="1_vxqbt"]
+[ext_resource type="Texture2D" uid="uid://dnsswwr7bdud1" path="res://assets/images/backgrounds/point_table_bg.jpg" id="2_lc2qs"]
+
+[node name="PointTable" type="Node2D" unique_id=453412295]
+script = ExtResource("1_vxqbt")
+
+[node name="Timer" type="Timer" parent="." unique_id=493642282]
+
+[node name="BackgroundLayer" type="CanvasLayer" parent="." unique_id=1930600995]
+
+[node name="BGRect" type="TextureRect" parent="BackgroundLayer" unique_id=357377941]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_lc2qs")
+expand_mode = 1
+
+[node name="ContentLayer" type="CanvasLayer" parent="." unique_id=1201086456]
+
+[node name="MainContent" type="VBoxContainer" parent="ContentLayer" unique_id=548515684]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="TopBar" type="HBoxContainer" parent="ContentLayer/MainContent" unique_id=453592738]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 20
+
+[node name="TitleLabel" type="Label" parent="ContentLayer/MainContent/TopBar" unique_id=129541283]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "TABLA DE PUNTOS"
+
+[node name="CountdownLabel" type="Label" parent="ContentLayer/MainContent/TopBar" unique_id=1106296089]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "10"
+horizontal_alignment = 2
+
+[node name="PlayersGrid" type="GridContainer" parent="ContentLayer" unique_id=1271777387]
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_vertical = 3
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 4
+
+[node name="PenaltySection" type="VBoxContainer" parent="ContentLayer" unique_id=1591624008]
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_vertical = 8
+theme_override_constants/separation = 10
+
+[node name="PenaltyTitle" type="Label" parent="ContentLayer/PenaltySection" unique_id=1750735970]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "PRENDAS"
+horizontal_alignment = 1
+
+[node name="PenaltyCards" type="HBoxContainer" parent="ContentLayer/PenaltySection" unique_id=1999863659]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 20

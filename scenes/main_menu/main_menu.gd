@@ -6,7 +6,7 @@ extends Node2D
 @onready var quit_button     : Button = $ContentLayer/MenuSection/QuitButton
 
 # ─── Scene References ─────────────────────────────────────────────────────
-const LOBBY_SCENE := "res://scenes/lobby/lobby.tscn"
+const LOBBY_SCENE := "res://scenes/game/lobby/lobby.tscn"
 
 # ─── Lifecycle ────────────────────────────────────────────────────────────
 func _ready() -> void:

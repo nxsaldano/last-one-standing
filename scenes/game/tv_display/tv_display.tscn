@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bxnr1fj4hraru"]
+
+[ext_resource type="Script" uid="uid://cpdvcow58iaws" path="res://scenes/game/tv_display/tv_display.gd" id="1_su0xs"]
+
+[node name="TVDisplay" type="Node2D" unique_id=559095014]
+script = ExtResource("1_su0xs")

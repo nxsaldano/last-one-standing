@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dgwdq84irx7rl"]
+
+[node name="LasCanicas" type="Node2D" unique_id=556380794]
+
+[node name="BackgroundRect" type="ColorRect" parent="." unique_id=722077525]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.2723355, 0.12831154, 0.043266527, 1)
+
+[node name="MarbleVFX" type="Node2D" parent="." unique_id=1323708921]
+
+[node name="UILayer" type="CanvasLayer" parent="." unique_id=1987535278]
+
+[node name="StatusLabel" type="Label" parent="UILayer" unique_id=1524872832]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="TimerLabel" type="Label" parent="UILayer" unique_id=1896728777]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="DuelsGrid" type="GridContainer" parent="UILayer" unique_id=1573365505]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GameTimer" type="Timer" parent="." unique_id=887760193]
+
+[node name="SimulationTimer" type="Timer" parent="." unique_id=1548516238]

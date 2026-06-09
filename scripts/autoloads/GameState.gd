@@ -22,6 +22,7 @@ var current_round : int   = 0
 # Each player is a Dictionary:
 # { "id": 0, "name": "Player 1", "score": 0 }
 var players : Array[Dictionary] = []
+var previous_scores  : Dictionary        = {}
 
 
 # ─── Player Management ────────────────────────────────────────────────────
@@ -51,6 +52,14 @@ func get_winner() -> Dictionary:
 			winner = player
 	return winner
 
+func snapshot_scores() -> void:
+	for player in players:
+		previous_scores[player["id"]] = player["score"]
+
+func get_score_delta(player_id: int) -> int:
+	if previous_scores.has(player_id):
+		return players[player_id]["score"] - previous_scores[player_id]
+	return 0
 
 # ─── Game Flow ────────────────────────────────────────────────────────────
 func start_game() -> void:
@@ -72,6 +81,7 @@ func end_game() -> void:
 # ─── Reset (for rematches) ────────────────────────────────────────────────
 func reset() -> void:
 	players.clear()
+	previous_scores.clear()
 	current_round = 0
 	current_state = State.LOBBY
 	selected_deck  = Deck.SQUID_GAME

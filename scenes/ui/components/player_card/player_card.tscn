@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cchjerc11x27j"]
+
+[ext_resource type="Script" uid="uid://6cifhvgsu75o" path="res://scenes/ui/components/player_card/player_card.gd" id="1_bagpc"]
+
+[node name="PlayerCard" type="PanelContainer" unique_id=936210700]
+script = ExtResource("1_bagpc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=924296323]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Avatar" type="ColorRect" parent="VBoxContainer" unique_id=961545306]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="NameLabel" type="Label" parent="VBoxContainer" unique_id=288473675]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+text = "Player"
+horizontal_alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="VBoxContainer" unique_id=1920956164]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+text = "0 pts"
+horizontal_alignment = 1
+
+[node name="DeltaLabel" type="Label" parent="VBoxContainer" unique_id=116288011]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "+0"
+horizontal_alignment = 1

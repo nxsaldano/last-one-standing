@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://drktaa8unu53p"]
 
-[ext_resource type="Script" uid="uid://d22b42jnnggxe" path="res://scenes/ui/components/PlayerSlot.gd" id="1_ecot8"]
+[ext_resource type="Script" uid="uid://d22b42jnnggxe" path="res://scenes/ui/components/player_slot/PlayerSlot.gd" id="1_ecot8"]
 
 [node name="PlayerSlot" type="VBoxContainer" unique_id=290591452]
 offset_right = 1.0

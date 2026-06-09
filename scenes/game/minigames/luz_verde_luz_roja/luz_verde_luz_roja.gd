@@ -1,5 +1,7 @@
 extends Node2D
 
+signal minigame_finished
+
 # ─── Node References ──────────────────────────────────────────────────────
 @onready var background_rect : ColorRect      = $BackgroundRect
 @onready var young_hee       : Sprite2D       = $YoungHeeImage
@@ -96,5 +98,4 @@ func _on_game_over() -> void:
 	_game_running = false
 	status_label.text = "FIN"
 	await get_tree().create_timer(2.0).timeout
-	# Notify TVDisplay that this minigame is done
-	get_parent().on_minigame_finished()
+	emit_signal("minigame_finished")    # ← signal instead of get_parent()
